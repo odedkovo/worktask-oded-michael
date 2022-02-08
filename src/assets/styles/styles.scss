@@ -10,3 +10,13 @@
 
 // Components
 @import 'components/header.scss';
+
+.bg-img {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 40%;
+    z-index: -1;
+}
