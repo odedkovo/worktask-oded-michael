@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -32,6 +32,7 @@ export function HomePage() {
   const { items } = useSelector((state) => ({ items: state.itemModule.items }));
   const [biggestCampaign, setBiggestCampaign] = useState('1000');
   const [expirience, setExpirience] = useState('no expirience');
+  const emailRef = useRef();
 
   useEffect(() => {
     getItems();
@@ -48,8 +49,11 @@ export function HomePage() {
   }
 
   const handleSubmit = (event) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+    if (!emailRegex.test(data.get('email'))) return invalidEmail();
     // eslint-disable-next-line no-console
 
     saveForm({
@@ -62,6 +66,12 @@ export function HomePage() {
       experience: expirience,
     });
   };
+
+  function invalidEmail() {
+    console.log(emailRef.current)
+    emailRef.current.querySelector('input').focus();
+    emailRef.current.querySelector('input').value = 'Invalid email pattern';
+  }
 
   return (
     <section className='homepage'>
@@ -114,6 +124,7 @@ export function HomePage() {
 
                 <Grid item xs={12}>
                   <TextField
+                    ref={emailRef}
                     required
                     fullWidth
                     id='email'
