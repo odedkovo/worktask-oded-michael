@@ -35,13 +35,13 @@ export function HomePage() {
   const [expirience, setExpirience] = useState('no expirience');
 
   useEffect(() => {
-    // getItems();
-  }, []);
+    getItems();
+  }, [items]);
 
-  // const getItems = async () => {
-  //   // console.log('you are in load product in home page ');
-  //   dispatch(loadItems());
-  // };
+  const getItems = async () => {
+    // console.log('you are in load product in home page ');
+    dispatch(loadItems());
+  };
 
   function saveForm(user) {
     dispatch(addItem(user));
@@ -58,13 +58,14 @@ export function HomePage() {
       email: data.get('email'),
       website: data.get('website'),
       linkedin: data.get('linkedin'),
-      biggestCampaign: biggestCampaign,
-      expirience: expirience,
+      biggestCampaign: +biggestCampaign,
+      experience: expirience,
     });
   };
 
   return (
     <section className='homepage'>
+      <h1 className='sent-number'>Sent forms number:{items.length}</h1>
       <ThemeProvider theme={theme}>
         <Container component='main' maxWidth='xs'>
           <CssBaseline />

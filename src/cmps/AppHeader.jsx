@@ -13,9 +13,9 @@ export function AppHeader() {
           <Link className='header-link' to='/'>
             homepage
           </Link>
-          <Link className='header-link' to='/secondpage'>
+          {/* <Link className='header-link' to='/secondpage'>
             secondpage
-          </Link>
+          </Link> */}
         </nav>
       </div>
     </section>
