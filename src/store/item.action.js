@@ -2,7 +2,7 @@
 import { CrudlService } from '../services/crudl.service.js';
 
 export function loadItems() {
-  console.log('in action');
+  // console.log('in action');
   return async (dispatch) => {
     try {
       const items = await CrudlService.query();
