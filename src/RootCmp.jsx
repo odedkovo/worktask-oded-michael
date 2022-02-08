@@ -14,8 +14,8 @@ export function RootCmp() {
         <AppHeader />
         <main className='main-app'>
           <Routes>
-            <Route path='/secondpage' element={<SecondPage />} />
             <Route path='/userlist' element={<UserList />} />
+            <Route path='/secondpage' element={<SecondPage />} />
             <Route path='/' element={<HomePage />} />
           </Routes>
         </main>

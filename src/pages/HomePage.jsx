@@ -35,7 +35,7 @@ export function HomePage() {
 
   useEffect(() => {
     getItems();
-  }, [items]);
+  }, []);
 
   const getItems = async () => {
     // console.log('you are in load product in home page ');
@@ -45,7 +45,6 @@ export function HomePage() {
   function saveForm(user) {
     dispatch(addItem(user));
     window.location.replace('/secondpage');
-
   }
 
   const handleSubmit = (event) => {
