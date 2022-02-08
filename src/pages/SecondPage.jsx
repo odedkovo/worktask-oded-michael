@@ -1,9 +1,7 @@
 export function SecondPage() {
   return (
-    <section className='second-page'>
-      <h1>second page</h1>
-
-      <img src='https://i.giphy.com/media/an48CLUcJZ2h1ciqmO/giphy.webp' />
+    <section style={{display:'flex',alignItems:'center',justifyContent:'center'}} className='second-page'>
+      <h1 style={{fontSize:'100px',color:'black',transform:'translateY(-100px)'}}>Thank You</h1>
     </section>
   );
 }
