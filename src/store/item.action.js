@@ -16,13 +16,13 @@ export function loadItems() {
 }
 
 export function addItem(item) {
-  console.log(item);
+  // console.log(item);
   return async (dispatch) => {
     try {
       const savedItem = await CrudlService.save(item);
       console.log(savedItem);
-      console.log('Added Succesfully!');
-      dispatch({ type: 'ADD_BOARD', savedItem });
+      // console.log('Added Succesfully!');
+      // dispatch({ type: 'ADD_BOARD', savedItem });
     } catch (err) {
       console.log('cannot add item', err);
     }

@@ -41,11 +41,13 @@ async function getById(boardId) {
   return board;
 }
 
-async function save(board) {
+async function save(user) {
   // const emptyBoard = _getEmptyBoard(board);
   // TODO to make a function that creates an empty object
-  // return await httpService.post('board', emptyBoard);
-  console.log('hi');
+  const savedUser = await httpService.post('market', user);
+  console.log(savedUser);
+  console.log('saving..');
+  return 'saved';
 }
 
 async function update(board) {

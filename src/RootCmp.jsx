@@ -11,7 +11,7 @@ export function RootCmp() {
     <section>
       <BrowserRouter>
         <AppHeader />
-        <main>
+        <main className='main-app'>
           <Routes>
             <Route path='/secondpage' element={<SecondPage />} />
             <Route path='/' element={<HomePage />} />

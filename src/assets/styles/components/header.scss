@@ -1,7 +1,7 @@
 .app-header {
   height: 10vh;
   width: 100%;
-  background-color: rgba(210, 213, 255, 0.055);
+  background-color: rgba(210, 213, 255, 0.301);
   .app-header-layout {
     height: 100%;
     width: 90%;
@@ -30,7 +30,7 @@
       font-size: 1.5rem;
       height: 100%;
       transition: 0.2s;
-      color: white;
+      color: rgb(0, 0, 0);
     }
 
     a:hover {
