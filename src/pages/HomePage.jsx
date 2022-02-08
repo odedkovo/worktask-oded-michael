@@ -9,7 +9,6 @@ import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import NativeSelect from '@mui/material/NativeSelect';
@@ -45,6 +44,8 @@ export function HomePage() {
 
   function saveForm(user) {
     dispatch(addItem(user));
+    window.location.replace('/secondpage');
+
   }
 
   const handleSubmit = (event) => {
