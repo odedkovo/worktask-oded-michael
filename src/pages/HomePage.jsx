@@ -122,6 +122,7 @@ export function HomePage() {
                     autoComplete='family-name'
                   />
                 </Grid>
+
                 <Grid item xs={12}>
                   <TextField
                     ref={emailRef}
@@ -133,6 +134,7 @@ export function HomePage() {
                     autoComplete='email'
                   />
                 </Grid>
+
                 <Grid item xs={12}>
                   <TextField
                     required

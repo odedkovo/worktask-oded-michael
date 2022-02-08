@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AppHeader } from './cmps/AppHeader.jsx';
 import { HomePage } from './pages/HomePage.jsx';
 import { SecondPage } from './pages/SecondPage.jsx';
+import { UserList } from './pages/UserList.jsx';
 
 export function RootCmp() {
   return (
@@ -14,6 +15,7 @@ export function RootCmp() {
         <main className='main-app'>
           <Routes>
             <Route path='/secondpage' element={<SecondPage />} />
+            <Route path='/userlist' element={<UserList />} />
             <Route path='/' element={<HomePage />} />
           </Routes>
         </main>
